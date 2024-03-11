@@ -1,0 +1,58 @@
+/* KidsShoes.css */
+
+/* Assuming .card-container is the class for the card container */
+.card-container {
+  height: 100%; /* Set a fixed height for all card containers */
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  height: 100%; /* Make sure the card takes the full height of the container */
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.carousel {
+  margin-bottom: 15px;
+}
+
+/* Add to Cart Button Styles */
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Wishlist Button Styles */
+.btn-danger {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #bd2130;
+}
+
+/* Active Sort Option Button Styles */
+.active {
+  background-color: #28a745;
+  color: #fff;
+}

@@ -1,0 +1,25 @@
+/* AboutUs.css */
+
+.about {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  width: 100%; /* Set the width to 100% */
+  max-width: 300px; /* Set a maximum width if needed */
+}
+
+.about:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.card-title {
+  color: orange;
+}
+
+.aboutTitle {
+  color: orange;
+}

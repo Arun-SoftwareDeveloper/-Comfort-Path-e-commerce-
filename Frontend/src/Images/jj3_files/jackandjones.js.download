@@ -1,0 +1,244 @@
+$(document).ready(function () {
+    $("#jackjones").owlCarousel({
+        navigation: true,
+        autoPlay: 3000, //Set AutoPlay to 3 seconds
+        navigation: true,
+        paginationSpeed: 400,
+        slideSpeed: 300,
+        items: 3,
+        itemsDesktop: [1199, 3],
+        itemsDesktopSmall: [979, 3]
+    });
+    $("#popularjeansfits").owlCarousel({
+	navigation: true,
+	autoPlay: 3000, //Set AutoPlay to 3 seconds
+	navigation: true,
+	paginationSpeed: 400,
+	slideSpeed: 300,
+	items: 3,
+	itemsDesktop: [1199, 3],
+	itemsDesktopSmall: [979, 3],
+        navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
+    });
+    $("#cELEBSSPOTTED").owlCarousel({
+	navigation: true,
+	autoPlay: 3000, //Set AutoPlay to 3 seconds
+	navigation: true,
+	paginationSpeed: 400,
+	slideSpeed: 300,
+	items: 3,
+	itemsDesktop: [1199, 3],
+	itemsDesktopSmall: [979, 3]
+    });
+     $("#trandingnow-slider").owlCarousel({
+	navigation: true,
+	autoPlay: 3000, //Set AutoPlay to 3 seconds
+	navigation: true,
+	paginationSpeed: 400,
+	slideSpeed: 300,
+	items: 3,
+	itemsDesktop: [1199, 4],
+	itemsDesktopSmall: [979, 4]
+    });
+    $("#clp-landing-0").owlCarousel({
+	navigation: true,
+	autoPlay: 3000, //Set AutoPlay to 3 seconds
+	navigation: true,
+	paginationSpeed: 400,
+	slideSpeed: 300,
+	singleItem: true,
+	navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
+    });
+    var owl = $("#popularjeansvideo").owlCarousel({
+	navigation: true,
+	singleItem: true,
+	autoPlay: false, //Set AutoPlay to 3 seconds
+	navigation: true,
+	paginationSpeed: 400,
+	slideSpeed: 300,
+	items: 2,
+	startDragging: function() {
+	    $("video[name='jjvideo[]']").map(function(){
+		this.pause();
+	    });
+	},
+    });
+    $("#clp-landing-banner").owlCarousel({
+        navigation: true,
+        navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+        autoPlay: true, //Set AutoPlay to 3 seconds
+        navigation: true,
+        paginationSpeed: 400,
+        slideSpeed: 300,
+        items: 5,
+        itemsDesktop: [1199, 4],
+        itemsDesktopSmall: [979, 3],
+        itemsMobile : [767, 3],
+    });
+    $("#clp-landing-banner").css({"overflow": "initial", "height": "auto"});
+    $("#MyPopup a.store-brand-name").html("jackjones.in");
+    $('.accordion-toggle.category-toggle-icon .plus').html('<i class="fa fa-angle-down"></i>');
+    $('.accordion-toggle.category-toggle-icon .minus').html('<i class="fa fa-angle-up"></i>');
+    $(window).scroll(function () {
+        if ($(window).scrollTop() >= 100) {
+            $('header').addClass('fixed-header');
+            $(".fixed-header").animate({top: "0px"});
+        } else {
+            $('header').removeClass('fixed-header');
+        }
+    });
+    if ($(window).width() < 768) {
+        $(".product-description .heading").click(function () {
+            $(this).toggleClass("active")
+            $(".pdp-description").slideToggle();
+        });
+    }
+// ===== go to Top ==== 
+    $(window).scroll(function () {
+        if ($(this).scrollTop() >= 50) {
+            $('#return-to-top').fadeIn(200);
+        } else {
+            $('#return-to-top').fadeOut(200);
+        }
+    });
+    $('#return-to-top').click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 500);
+    });
+    // ===== go to Top ==== 
+    if ($(window).width() < 992) {
+        $(".mobileSpecificICon .mobile-icon").click(function () {
+            $(".responsive body .mega-menu-modules .horizontal .megamenu-wrapper").show();
+        });
+        //$("li.menu-close-img").on('click',function(){
+        $(document).delegate("li.menu-close-img", "click", function () {
+            $(".responsive body .mega-menu-modules .horizontal .megamenu-wrapper").hide();
+        });
+
+        $(document).delegate(".header-right #cart .cart-icon", "click", function () {
+            window.location = "/cart";
+        });
+        
+        $(document).delegate(".responsive .mega-menu-modules .horizontal .megamenu-wrapper", "click", function () {
+            $(".responsive body .mega-menu-modules .horizontal .megamenu-wrapper").hide();
+        });
+    }
+    
+    // Zipcode //
+    $(".chkzipcodContainer .panel1head").click(function(){
+	$(".panel1 .panel1body").toggle();
+    });
+});
+$(document).on('click touchstart', '#popularjeansvideo .owl-pagination .owl-page', function (e) {
+   $("video[name='jjvideo[]']").map(function(){
+	this.pause();
+    });
+}); 
+//$(document).ready(function(){
+//    $(".area-input-container").slideUp("100");
+//    $(".area-cross-btn").hide();
+////    $(".input-area-box").click(function(){
+//     $(document).delegate(".input-area-box", "click", function () {
+//    $(".area-input-container").slideToggle("slow");
+//    $(".area-btn").toggle();
+//     $(".area-btn").toggle();
+//  });
+//});
+$(document).ready(function(){
+    $(".area-cross-btn").hide();
+     $(document).delegate(".input-area-box", "click", function () {    
+        $(".input-area-box .dropdown-menu").slideToggle("slow");
+         $(".area-btn").toggle();
+          $(".area-cross-btn").toggle();   
+    });
+});
+$(document).ready(function(){
+    $(".open-close-details").css("display", "block");
+//     $(".local-adress-content").on(function(){
+       $(document).delegate(".local-adress-content", "click", function () {
+//          $(".gm-style .gm-style-iw-t").show();
+    var find_store = $(this).hasClass('local-adress-border');   
+    $('.local-adress-content').children(".open-close-details").css("display", "none");
+    $('.local-adress-content').removeClass("local-adress-border"); 
+    $('.local-adress-content').children(".address-icon").children(".toggle-btn").removeClass("toggle-rotate");
+    if(find_store == false){
+        $(this).addClass("local-adress-border");
+         $('.local-adress-container').animate({
+            scrollTop: $(".local-adress-border").offset().top - $(".local-adress-container").offset().top + $('.local-adress-container').scrollTop()
+          },"slow");
+        $(this).children(".address-icon").children(".toggle-btn").addClass("toggle-rotate");
+        $(this).children(".open-close-details").css("display", "block");
+    } else {
+        $(this).children(".open-close-details").css("display", "none");
+        $(this).removeClass("local-adress-border"); 
+        $(this).children(".address-icon").children(".toggle-btn").removeClass("toggle-rotate");
+        $(".gm-style .gm-style-iw-t").hide();
+    }                 
+        });
+     
+});
+$(document).ready(function(){
+    if ($(window).width() < 992) {
+        $('#search_query').on('keyup', function () {
+            if($(this).val().length){
+                $(this).parent().addClass('active');
+            } else {
+                $(this).parent().removeClass('active');
+            }
+        });
+        $('#search i').on('click', function () {
+            $(this).parent().parent().removeClass('open');
+            $('#search_query').val('');
+        });
+    }
+    $(document).delegate("#search.active i.fa", "click", function () {
+        $(".search-bar").removeClass("open");
+    });
+    $("#map_canvas").hide();
+    $("#tab-btn-two").click(function(){
+        $("#map_canvas").show();
+         $(".local-adress-container").hide();
+    });
+    $("#tab-btn-one").click(function(){
+        $("#map_canvas").hide();
+         $(".local-adress-container").show();
+    });
+});
+$(document).ready(function(){
+    $(document).delegate("#tab-btn-two", "click", function () {
+        $(".animated-line").addClass("animated-toggle");
+    });
+    $(document).delegate("#tab-btn-one", "click", function () {
+        $(".animated-line").removeClass("animated-toggle");
+    });
+});
+window.addEventListener('load', function() { 
+    $(window).bind("load", function() {
+	$('.camera_wrap').css({"overflow" : "initial"});
+        $('#mob-cameraslider').css({"overflow" : "initial", "height":"auto"});
+    }); 
+});
+    window.addEventListener('load', function () {
+        $(document).ready(function () {
+            $("#clp-landing-0").owlCarousel({
+                navigation: true,
+                autoPlay: 3000, //Set AutoPlay to 3 seconds
+                navigation: true,
+                paginationSpeed: 400,
+                slideSpeed: 300,
+                singleItem: true,
+                navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
+            });
+        });
+    });
+    function init_images() {
+        setTimeout(function(){
+        var vidDefer = document.getElementsByClassName('lload');
+        for (var i=0; i<vidDefer.length; i++) {
+            if(vidDefer[i].getAttribute('data-src')) {
+                vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('data-src'));
+            }
+        }
+    },100);}
+    init_images();

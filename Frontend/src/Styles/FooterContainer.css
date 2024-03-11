@@ -1,0 +1,16 @@
+.footer-container {
+  background-color: #212529; /* Slightly darker background color for the container */
+  color: white; /* Text color */
+  padding: 10px; /* Add padding to the container */
+}
+
+/* Center the text inside the container */
+.text-center {
+  text-align: center;
+}
+
+/* Hover effect for the copyright text */
+.footer-container:hover {
+  color: #ffc107; /* Change text color on hover (you can choose your desired color) */
+  transition: color 0.3s ease-in-out; /* Smooth transition effect */
+}

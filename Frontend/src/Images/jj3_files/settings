@@ -1,0 +1,85 @@
+var notify_visitors =notify_visitors?notify_visitors: {};
+    notify_visitors["Bot"]= {
+        "data":{"Authentication":"success","brandID":"8597","shopify_shop":"","referrer_source":"https:\/\/www.jackjones.in\/208744004-black?utm_source=google&utm_medium=cpc&utm_campaign=b00012|jj|performance_max|troas-16020643177&utm_term=-&utm_content=&utm_device=c&utm_placement=&gad_source=1&gclid=cjwkcaiau9yqbhbmeiwahtx5p74fes7xvcb-1fboz4ig1hepajfjmcoxy4z2bwevekkdzutmqn0rdbocbr4qavd_bwe","cookieDomain":".jackjones.in","newSess":true,"isPwa":0,"Account":["Chatbot Account Expired. Upgrade now."],"tokens":"","gaEvents":{"trackingID":"","events":[]}}    };
+    notify_visitors["Banner"]= {
+        "data":{"Authentication":"success","brandID":"8597","shopify_shop":"","referrer_source":"https:\/\/www.jackjones.in\/208744004-black?utm_source=google&utm_medium=cpc&utm_campaign=b00012|jj|performance_max|troas-16020643177&utm_term=-&utm_content=&utm_device=c&utm_placement=&gad_source=1&gclid=cjwkcaiau9yqbhbmeiwahtx5p74fes7xvcb-1fboz4ig1hepajfjmcoxy4z2bwevekkdzutmqn0rdbocbr4qavd_bwe","cookieDomain":".jackjones.in","newSess":true,"isPwa":0,"Account":["Web Notifications and Surveys inactive. Upgrade now."],"tokens":"","gaEvents":{"trackingID":"","events":["nv_banner_impressions","nv_banner_closed","nv_banner_clicks","nv_survey_impressions","nv_survey_closed","nv_survey_completed","nv_survey_dropped"]}}    };
+    notify_visitors["Push"]={
+        "data":{"Authentication":"success","brandID":"8597","shopify_shop":"","referrer_source":"https:\/\/www.jackjones.in\/208744004-black?utm_source=google&utm_medium=cpc&utm_campaign=b00012|jj|performance_max|troas-16020643177&utm_term=-&utm_content=&utm_device=c&utm_placement=&gad_source=1&gclid=cjwkcaiau9yqbhbmeiwahtx5p74fes7xvcb-1fboz4ig1hepajfjmcoxy4z2bwevekkdzutmqn0rdbocbr4qavd_bwe","cookieDomain":".jackjones.in","newSess":true,"isPwa":0,"Account":["Push inactive. Upgrade now.","PWA inactive. Upgrade now."],"tokens":"","gaEvents":{"trackingID":"","events":["nv_push_allowed","nv_push_denied","nv_push_closed","nv_push_permbox_denied","nv_push_permbox_allow","nv_push_permbox_shown","web_app_shown","web_app_canceled","web_app_installed","web_app_opened"]}}    };
+    notify_visitors["Events"]={
+        "data":{"Authentication":"success","brandID":"8597","shopify_shop":"","referrer_source":"https:\/\/www.jackjones.in\/208744004-black?utm_source=google&utm_medium=cpc&utm_campaign=b00012|jj|performance_max|troas-16020643177&utm_term=-&utm_content=&utm_device=c&utm_placement=&gad_source=1&gclid=cjwkcaiau9yqbhbmeiwahtx5p74fes7xvcb-1fboz4ig1hepajfjmcoxy4z2bwevekkdzutmqn0rdbocbr4qavd_bwe","cookieDomain":".jackjones.in","newSess":true,"isPwa":0,"Account":["Events inactive. Upgrade now."]}    };
+    notify_visitors["Optimize"]={
+        "data":{"Authentication":"success","brandID":"8597","shopify_shop":"","referrer_source":"https:\/\/www.jackjones.in\/208744004-black?utm_source=google&utm_medium=cpc&utm_campaign=b00012|jj|performance_max|troas-16020643177&utm_term=-&utm_content=&utm_device=c&utm_placement=&gad_source=1&gclid=cjwkcaiau9yqbhbmeiwahtx5p74fes7xvcb-1fboz4ig1hepajfjmcoxy4z2bwevekkdzutmqn0rdbocbr4qavd_bwe","cookieDomain":".jackjones.in","newSess":true,"isPwa":0,"domain":"https:\/\/www.jackjones.in","Account":["ABtest Account Expired. Upgrade now."],"gaEvents":{"trackingID":"","events":["ab_goal_conversion","ab_variation_applied"]},"tokens":""}    };
+    notify_visitors["Form"]={
+        "data":{"Authentication":"success","brandID":"8597","shopify_shop":"","referrer_source":"https:\/\/www.jackjones.in\/208744004-black?utm_source=google&utm_medium=cpc&utm_campaign=b00012|jj|performance_max|troas-16020643177&utm_term=-&utm_content=&utm_device=c&utm_placement=&gad_source=1&gclid=cjwkcaiau9yqbhbmeiwahtx5p74fes7xvcb-1fboz4ig1hepajfjmcoxy4z2bwevekkdzutmqn0rdbocbr4qavd_bwe","cookieDomain":".jackjones.in","newSess":true,"isPwa":0,"Account":["Lead Form inactive. Upgrade now."],"gaEvents":{"trackingID":"","events":["nv_leadform_impressions","nv_leadform_close","nv_leadform_completed","nv_leadform_dropped"]}}    };
+    
+    if(notify_visitors.data && !notify_visitors.data.spa){
+        notify_visitors.data.spa = {};
+    }else if(notify_visitors.data && notify_visitors.data.spa && Object.keys(notify_visitors.data.spa).length > 0){
+        if(typeof nvpack != 'undefined' && nvpack.config != 'undefined'){ 
+            nvpack.config = {}; 
+        }
+        if(typeof notify_visitors.data.spa == "string"){
+            notify_visitors.data.spa = JSON.parse(notify_visitors.data.spa);
+        }
+    }
+
+    notify_visitors.spa = 0;
+
+var nv_location = {"country":"India","city":"Mumbai","region":"Maharashtra","code":"IN","dial_code":"+91","long":"72.877377","lat":"19.075975","region_code":"16","lang":"hindi","continent_code":"AS","continent_name":"Asia"};
+
+ 
+
+    notify_visitors.CustomBrandScript = {"Account":["Custom Script inactive. Upgrade now."]};
+
+    
+var nvEcheck=function(){if("undefined"!=typeof nvpack){clearInterval(checkNvpack);if("undefined"!=window.nv&&window.nv.q){var d=window.nv.q,e="user pushuser event pushevent pushsubscribe dimensions".split(" ");if(nvpack&&nvpack.anal&&nvpack.anal.nvHandler)for(var g=0;g<d.length;g++){var k=Array.prototype.slice.call(d[g]);notify_visitors.Events.data.status&&-1!==e.indexOf(k[0])&&nvpack.anal.nvHandler(k)}}window.nv=function(){var h="user pushuser event pushevent pushsubscribe dimensions".split(" "),
+b=["form_submit"],a=Array.prototype.slice.call(arguments);0<a.length&&notify_visitors.Events.data.status&&-1!==h.indexOf(a[0])&&nvpack&&nvpack.anal&&nvpack.anal.nvHandler&&nvpack.anal.nvHandler(a);notify_visitors.Optimize.data.form_data&&notify_visitors.Optimize.data.form_data.status&&-1!==b.indexOf(arguments[0])&&nvpack&&nvpack.heatmaps&&nvpack.heatmaps.nvHandler&&nvpack.heatmaps.nvHandler(arguments);if(Array.isArray(a)&&"get_NV_UID"==a[0])return window.notify_visitors.data.NV_UID?window.notify_visitors.data.NV_UID:
+"";if(Array.isArray(a)&&"get_web_app"==a[0])return["website","pwa","twa"][window.notify_visitors.data.isPwa];if(Array.isArray(a)&&"get_push_subscription"==a[0])return notify_visitors.data.getCookie("_nv_push_subscribe")?notify_visitors.data.getCookie("_nv_push_subscribe"):!1}}},checkNvpack=window.setInterval(nvEcheck,100);notify_visitors.prevLocation=[window.location].reduce(function(d,e){Object.keys(e).forEach(function(g){d[g]=e[g]});return d},{});
+(function(d){function e(b){this.callback=b;this.callback=this.callback.bind(this);this.watchPushState=this.watchPushState.bind(this);this.watchPopState=this.watchPopState.bind(this);this.watchReplaceState=this.watchReplaceState.bind(this);this.override(history,"pushState",this.watchPushState);this.override(history,"replaceState",this.watchReplaceState);d.addEventListener("popstate",this.watchPopState)}function g(){h&&clearInterval(h);h=setTimeout(function(){k()},500);notify_visitors.prevLocation=
+[d.location].reduce(function(b,a){Object.keys(a).forEach(function(c){b[c]=a[c]});return b},{})}function k(){h=null;if(notify_visitors.eventsRecord&&0<Object.keys(notify_visitors.eventsRecord).length){var b=notify_visitors.eventsRecord,a;for(a in b)b.hasOwnProperty(a)&&b[a].forEach(function(c){try{var f=c.e,l=c.n,m=c.c;f.removeEventListener?f.removeEventListener(l,m):f.detachEvent&&f.detachEvent("on"+l,m)}catch(n){}})}try{b=function(c){c&&c.remove()},document.querySelectorAll("div[id^=notify-visitors-]").forEach(b),
+document.querySelectorAll(".notify-visitors-element").forEach(b),document.getElementById("nv_bot_frame")&&document.getElementById("nv_bot_frame").remove()}catch(c){}notify_visitors.data.spa=notify_visitors.data.spa?JSON.stringify(notify_visitors.data.spa):"";notify_visitors.eventsRecord={};notify_visitors.preInit?notify_visitors.preInit():null;notify_visitors.initialize=!1;notify_visitors.init()}e.prototype.watchPushState=function(b){var a=this;return function(){b.apply(this,arguments);try{"function"==
+typeof a.callback&&a.callback(!0,"push_state")}catch(c){}}};e.prototype.watchReplaceState=function(b){var a=this;return function(){b.apply(this,arguments);try{"function"==typeof a.callback&&a.callback(!1,"replace_state")}catch(c){}}};e.prototype.watchPopState=function(b){try{"function"==typeof context.callback&&context.callback(!0,"pop_state")}catch(a){}};e.prototype.override=function(b,a,c){b[a]=c(b[a])};var h=null;notify_visitors.routingType&&"hash"==notify_visitors.routingType&&d.addEventListener("hashchange",
+function(b){b.newURL!=b.oldURL&&g()},!1);d.notify_visitors&&!d.notify_visitors.nv_history_watch&&(d.notify_visitors.nv_history_watch=new e(function(b,a){var c=new URL(notify_visitors.prevLocation.href),f=new URL(d.location.href);c.origin+c.pathname==f.origin+f.pathname&&c.origin+c.pathname+c.hash==f.origin+f.pathname+f.hash||g()}))})(window);
+
+
+(function(c){function l(){if("object"===typeof l.instance)return l.instance;this.get_deviceID=function(){return"2409:40f4:24:be52:14af:51e4:e19e:fc18gmso0"};this.customPermissionBox=function(){return notify_visitors.po.customPermissionBox(1)};this.customPermissionBox=this.customPermissionBox.bind(this);this.get_deviceID=this.get_deviceID.bind(this);l.instance=this}function q(){c.notify_visitors=c.notify_visitors||{};c.notify_visitors.manual=c.notify_visitors.manual||{};c.notify_visitors.manual.onclick||(c.notify_visitors.manual.onclick=
+function(a){notify_visitors.Banner.data.auth=notify_visitors.auth;t("//cdn.notifyvisitors.com/ext/js/nv-banner.js",function(){try{notify_visitors.data.spa.banner=1}catch(d){}c.notify_visitors.manual.onclick(a)})});c.notify_visitors.manual.onclickForm||(c.notify_visitors.manual.onclickForm=function(a){notify_visitors.Form.data.auth=notify_visitors.auth;t("//cdn.notifyvisitors.com/ext/js/nv-leadform.js",function(){try{notify_visitors.data.spa.leadform=1}catch(d){}c.notify_visitors.manual.onclickForm(a)})})}
+function t(a,d){var b=document.createElement("script");b.type="text/javascript";b.readyState?b.onreadystatechange=function(){if("loaded"==b.readyState||"complete"==b.readyState)b.onreadystatechange=null,d()}:b.onload=function(){d()};b.src=a;document.getElementsByTagName("head")[0].appendChild(b)}c._nv_data=new l;"complete"==document.readyState?q():c.addEventListener?c.addEventListener("load",q,!1):c.attachEvent&&c.attachEvent("onload",q);c.sessionStorage.getItem("_nv_location")||""===nv_location||
+c.sessionStorage.setItem("_nv_location",JSON.stringify(nv_location));notify_visitors.data.session=function(a){if(a&&"object"===typeof a&&a.cookies&&"object"===typeof a.cookies&&0<Object.keys(a.cookies).length&&a.domain){var d=Array.isArray(a.cookies._nv_hit)&&a.cookies._nv_hit[2]&&1==a.cookies._nv_hit[2]?1:0;Array.isArray(a.cookies._nv_hit)&&a.cookies._nv_hit[0]&&1!=d&&(a.cookies._nv_hit[0]=notify_visitors.data.modifyHitCookie(a.cookies._nv_hit[0]));d="none"!==a.domain?"domain="+a.domain+";":"";for(var b in a.cookies){var f=
+new Date;if("_nv_sess"==a.cookies[b]){if(document.cookie="_nv_sess="+a.cookies[b][0]+";expires="+(new Date(f.getTime()+6E4*a.cookies[b][1])).toUTCString()+";"+d+"path=/; secure",a.newSess&&a.callback_data){var g=null;g=c.setInterval(function(){c&&c.nvpack&&c.nvpack.callbackNotifyEvent&&(c.clearInterval(g),c.nvpack.callbackNotifyEvent.send(a.callback_data,"userSession"))},100)}}else document.cookie=b+"="+a.cookies[b][0]+";"+(a.cookies[b][1]?"expires="+(new Date(f.getTime()+6E4*a.cookies[b][1])).toUTCString()+
+";":"")+d+" path=/; secure"}}};notify_visitors.data.modifyHitCookie=function(a){if(a){var d=a.split("."),b=notify_visitors.data.getCookie("_nv_hit");if(b&&a){b=c.atob(b.split(".")[2]);var f=c.atob(d[2]);if(b!==f){b=b.split("|");f=f.split("|");var g={},k={},r="",u=function(e){for(var m=0;m<e.length;++m)for(var n=m+1;n<e.length;++n)e[m]===e[n]&&e.splice(n--,1);return e};b.forEach(function(e){e=e.split("=");g[e[0]]=JSON.parse(e[1])});f.forEach(function(e){e=e.split("=");k[e[0]]=JSON.parse(e[1])});if(0<Object.keys(g).length&&
+0<Object.keys(k).length){for(var h in k)k.hasOwnProperty(h)&&g.hasOwnProperty(h)?JSON.stringify(k[h])!==JSON.stringify(g[h])&&(g[h]="pview"==h?k[h]:u(g[h].concat(k[h]))):g[h]=k[h];for(var p in g)r+=r?"|"+p+"="+JSON.stringify(g[p]):""+p+"="+JSON.stringify(g[p]);return d[0]+"."+d[1]+"."+c.btoa(r)}}}return a}};notify_visitors.data.getCookie=function(a){a+="=";for(var d=decodeURIComponent(document.cookie).split(";"),b=0;b<d.length;b++){for(var f=d[b];" "==f.charAt(0);)f=f.substring(1);if(0==f.indexOf(a))return f.substring(a.length,
+f.length)}return""};notify_visitors.data.set_NV_UID=function(a){notify_visitors.data.NV_UID=a}})(window);
+
+
+notify_visitors.data.set_NV_UID('f303c49d-11f0-4fca-907a-87dfa7c04654');
+notify_visitors.data.session({"cookies":{"_nv_sess":["225168389.1700228752.FaeYYbNfMt69DiU0Ke5qSC31052OdsHm6uVNFTVJorkQG7fAun",30],"_nv_uid":["225168389.1700228752.f303c49d-11f0-4fca-907a-87dfa7c04654.1700228752.1700228752.1.0",1051000],"_nv_utm":["225168389.1700228752.1.1.dXRtc3JjPWdvb2dsZXx1dG1jY249QjAwMDEyJTdDSkolN0NQZXJmb3JtYW5jZV9NYXglN0N0Uk9BUy0xNjAyMDY0MzE3N3x1dG1jbWQ9Y3BjfHV0bWN0cj0tfHV0bWNjdD18Z2NsaWQ9Q2p3S0NBaUF1OXlxQmhCbUVpd0FIVHg1cDc0RkVzN3hWQ2ItMUZiT1o0aWcxSEVQQWpGak1Db3hZNHoyQndldmVLS2RaVVRtcW4wcmRCb0NiUjRRQXZEX0J3RQ==",262800],"_nv_hit_uid":[1,-1440],"_nv_form_x":[1,-1440],"_nv_banner_x":[1,-1440],"_nv_did":["225168389.1700228752.2409:40f4:24:be52:14af:51e4:e19e:fc18gmso0",1051000],"_nv_hit":["225168389.1700228752.cHZpZXc9MQ==",262800,0]},"domain":".jackjones.in","uuid":"f303c49d-11f0-4fca-907a-87dfa7c04654","newSess":true,"callback_data":{"utm_params":{"utm_source":"google","utm_campaign":"B00012%7CJJ%7CPerformance_Max%7CtROAS-16020643177","utm_medium":"cpc","utm_keyword":"-","utm_content":"","utm_gclid":"CjwKCAiAu9yqBhBmEiwAHTx5p74FEs7xVCb-1FbOZ4ig1HEPAjFjMCoxY4z2BweveKKdZUTmqn0rdBoCbR4QAvD_BwE"}}});
+
+
+    notify_visitors.load = function(link,eAtt) {
+        eAtt = eAtt || {};
+        var d = document;
+        var sTag = d.createElement("script");
+        sTag.type = "text/javascript";
+        sTag.async = nv.async;
+        Object.keys(eAtt).forEach(function (el){
+            sTag[el] = eAtt[el];
+        });
+        sTag.src = link;
+        if (d.body) {
+            d.body.appendChild(sTag);
+        } else {
+            d.head.appendChild(sTag);
+        }
+    };
+
+
+ 
+  
+
+ 
+        
+    
+    
+ 
+    
